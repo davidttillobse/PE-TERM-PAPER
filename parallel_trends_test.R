@@ -3,6 +3,7 @@ rm(list=ls())
 library(dplyr)
 library(ggplot2)
 library(readxl)
+library(grid)
 library(gridExtra)
 
 source("data_clean_aggregate_votes.R")
@@ -42,3 +43,4 @@ grid.arrange(turnout_plot, blank_plot, null_plot, ncol = 1)
 #Save graph
 trends <- grid.arrange(turnout_plot, blank_plot, null_plot, ncol = 1)
 ggsave("parallel_trend.png", trends, dpi = 300)
+
